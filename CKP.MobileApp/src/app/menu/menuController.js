@@ -19,7 +19,11 @@ app.controller('menuController', [
                           
                            kendo.mobile.application.navigate("src/app/login/login.html");
                        }
-                         
+                       $scope.goBack = function ()
+                       {
+                           alert('back');
+                           kendo.mobile.application.navigate("src/app/menu/menu.html");
+                       }
                        $scope.mnuClick = function(viewName) {
      
                          
