@@ -21,9 +21,10 @@ app.controller('menuController', [
                        }
                        $scope.goBack = function ()
                        {
-                           alert('back');
+                          
                            kendo.mobile.application.navigate("src/app/menu/menu.html");
                        }
+                       $scope.hasMenu = true;
                        $scope.mnuClick = function(viewName) {
      
                          
