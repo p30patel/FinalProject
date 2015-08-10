@@ -12,19 +12,20 @@ app.controller('menuController', [
                        $scope.menu.feedback = "Feedback";
                        
                        $scope.authentication = authService.authentication;
-                     
+                       $scope.hasLoginView = false;
                        //logout
                        $scope.logout = function () {
                            authService.logout();
                           
                            kendo.mobile.application.navigate("src/app/login/login.html");
+                           $scope.lasLoginView = true;
                        }
                        $scope.goBack = function ()
                        {
                           
                            kendo.mobile.application.navigate("src/app/menu/menu.html");
                        }
-                       $scope.hasMenu = true;
+                    
                        $scope.mnuClick = function(viewName) {
      
                          
