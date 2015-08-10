@@ -1,4 +1,5 @@
-<kendo-mobile-view k-transition="'slide'">
+<kendo-mobile-view k-transition="'slide:right'"  style="width: 270px" ng-controller="menuController">
+            <kendo-mobile-header>
     <kendo-mobile-header>
         <kendo-mobile-nav-bar class="km-accent">
             <kendo-mobile-back-button k-align="'left'">Back</kendo-mobile-back-button>
@@ -8,16 +9,43 @@
     </kendo-mobile-header>
     <kendo-mobile-content>
         <ul kendo-mobile-list-view>
-          <!--  <li data-icon="check-icon icon-contact"><a href="views/contact-us.html">Contact Us</a>
-            </li>
-            <li data-icon="check-icon icon-faq"><a href="views/faqs.html">FAQs</a>
-            </li>
-            <li data-icon="check-icon icon-terms"><a href="views/terms.html">Terms Conditions</a>
-            </li>
-            <li data-icon="check-icon icon-policy"><a href="views/policies.html">Policies</a>
-            </li>
-            <li data-icon="check-icon icon-help"><a>Help</a>
-            </li>-->
+             <li>
+
+                    <a href="src/app/contactus/contactus.html" data-icon="check-icon icon-contact">
+                        {{menu.contactus}}
+                    </a>
+                </li>
+                <li>
+                    <a href="src/app/faq/faq.html" data-icon="check-icon icon-faq">
+                        {{menu.faq}}
+                    </a>
+                </li>
+                <li>
+                    <a href="src/app/termsCondition/termsCondition.html" data-icon="check-icon icon-terms">
+                        {{menu.termsCondition}}
+                    </a>
+                </li>
+                <li>
+                    <a href="src/app/policy/policy.html" data-icon="check-icon icon-policy">
+                        {{menu.policies}}
+                    </a>
+                </li>
+                <li>
+                    <a href="src/app/help/help.html" data-icon="check-icon icon-help">
+                        {{menu.help}}
+                    </a>
+                </li>
+                <li ng-show="authentication.isAuth">
+                    <a href="src/app/notification/notification.html" data-icon="settings">
+                        {{menu.notificationSettings}}
+                    </a>
+                </li>
+                <li ng-show="authentication.isAuth">
+                    <a href="src/app/feedback/feedback.html" data-icon="home">
+                        {{menu.feedback}}
+                    </a>
+                </li>
+    
         </ul>
         <ul kendo-mobile-list-view class="km-grey-box">
             <li>

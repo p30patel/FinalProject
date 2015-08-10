@@ -14,10 +14,10 @@ app.run(['authService', function (authService) {
     authService.fillAuthData();
 
 }]);
-
-app.config(function ($httpProvider) {
-    $httpProvider.interceptors.push('authInterceptorService');
-});
+//removed to fix back button code 
+//app.config(function ($httpProvider) {
+//    $httpProvider.interceptors.push('authInterceptorService');
+//});
 (function (g) {
 
     var productId = "d7464702a97c4d9389e316daca91db9d"; // App unique product key
