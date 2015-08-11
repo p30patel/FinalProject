@@ -20,7 +20,7 @@
                 <li>
                     <label class="km-label-above">
                         <input value="Password123" type="password" placeholder="{{form.password.resoruceValue}}" ng-model="loginData.password" required placeholder="Password" >
-                        <kendo-mobile-button k-icon="'check-icon icon-password'" class="password-button" data-rel="modalview"  id="modalview-open-button"></kendo-mobile-button>
+                        <kendo-mobile-button k-icon="'check-icon icon-password'" class="password-button" data-rel="modalview" k-on-click="forgotPasswordModalOpen()" id="modalview-open-button"></kendo-mobile-button>
                     </label>
                 </li>
                        <li>
@@ -77,7 +77,7 @@
                         <input type="email" id="email" ng-model="loginData.email" />
                     </label>
                 </li>
-                     <li>
+                     <i></i>
                     <kendo-mobile-button class="km-primary km-large km-justified"  k-on-click="sendPassword()" >Send New Password</kendo-mobile-button>
                 </li>
             </kendo-mobile-list-view>
